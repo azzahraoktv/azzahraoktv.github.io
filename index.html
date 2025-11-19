@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Azzahra Oktavia | Data Scientist & Librarian</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // PALET WARNA BARU (Rhino, Fountain Blue, Ship Cove, Mischka)
+                        primary: '#293347',     // Rhino - Background Utama
+                        secondary: '#52B8B8',   // Fountain Blue - Aksi/Sorotan
+                        accent: '#708AAB',      // Ship Cove - Penekanan/Gradien
+                        highlight: '#D5D9E0'    // Mischka - Highlight Ringan/Teks Sekunder
+                    },
+                    // KONFIGURASI TAMBAHAN UNTUK INTERAKTIF DAN TRANSISI
+                    transitionProperty: {
+                        'all': 'all',
+                    },
+                    transitionDuration: {
+                        '400': '400ms', // Durasi transisi lebih halus (smooth)
+                    },
+                    // BOX SHADOW BARU UNTUK PROYEK CARD AGAR LEBIH MENONJOL SAAT HOVER
+                    boxShadow: {
+                        'project-hover': '0 10px 30px rgba(82, 184, 184, 0.4)',
+                    }
+                }
+            }
+        };
+    </script>
+    <style>
+        /* Floating animation for image */
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        /* Fade-in animation for hero text */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-primary via-[#2C3F58] to-[#43597D] min-h-screen text-white font-sans">
+    
+    <header class="bg-primary/80 backdrop-blur-sm shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <span class="text-xl font-bold text-white">Azzahra.oktv</span>
+            <nav class="hidden md:flex gap-6 text-sm">
+                <a href="#about" class="hover:text-secondary transition duration-400">About</a>
+                <a href="#projects" class="hover:text-secondary transition duration-400">Projects</a>
+                <a href="#contact" class="hover:text-secondary transition duration-400">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-12">
+
+        <section class="flex flex-col md:flex-row items-center gap-12 mb-24">
+            <div class="md:w-1/2 animate-fade-in">
+                <h1 class="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-secondary via-accent to-white mb-4">
+                    Azzahra Oktavia
+                </h1>
+                <h2 class="text-2xl text-secondary mb-6">Data Scientist | Librarian | Information Alchemist</h2>
+                <p class="text-lg mb-8 opacity-90">Transforming raw data into golden insights and organizing knowledge for the digital age.</p>
+                <div class="flex gap-4">
+                    <a href="#projects" class="bg-gradient-to-r from-accent to-secondary hover:from-secondary hover:to-accent text-primary px-6 py-3 rounded-xl transition-all duration-400 shadow-lg hover:shadow-project-hover hover:scale-105 font-semibold">
+                        My Projects
+                    </a>
+                    <a href="#contact" class="bg-transparent border-2 border-secondary hover:bg-secondary/20 text-secondary px-6 py-3 rounded-xl transition-all duration-400 hover:scale-105">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+
+            <div class="md:w-1/2 relative">
+                <div class="relative w-64 h-64 md:w-80 md:h-80 mx-auto floating">
+                    <div class="absolute inset-0 bg-gradient-to-br from-accent to-secondary rounded-full blur-xl opacity-40 animate-pulse"></div>
+                    
+                    <img src="images/fotoku.jpeg" alt="Azzahra Oktavia Profile Picture" class="relative w-full h-full object-cover rounded-full border-4 border-white shadow-2xl z-10">
+                    
+                    <div class="absolute -inset-4 bg-accent rounded-full opacity-20 blur-xl z-0"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="mb-24">
+            <h2 class="text-3xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-accent to-secondary mb-8">
+                About Me
+            </h2>
+            <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 max-w-4xl mx-auto shadow-xl shadow-primary/20">
+                <p class="text-lg mb-6 opacity-90">Halo! Saya Azzahra, seorang Data Scientist dengan hati seorang Pustakawan. Saya menjembatani dunia data mining dan penataan informasi, menggunakan Python, SQL, dan tool visualisasi data untuk mengungkap pola tersembunyi. Tujuan saya sederhana: merancang sistem yang membuat pengetahuan menjadi gampang diakses, terstruktur, dan bisa langsung dipakai untuk mengambil keputusan penting.</p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+                    <div class="bg-primary/50 p-4 rounded-lg text-center hover:bg-primary/70 transition duration-400">
+                        <i data-feather="database" class="w-8 h-8 mx-auto mb-2 text-secondary"></i>
+                        <p>Data Mining</p>
+                    </div>
+                    <div class="bg-primary/50 p-4 rounded-lg text-center hover:bg-primary/70 transition duration-400">
+                        <i data-feather="book" class="w-8 h-8 mx-auto mb-2 text-secondary"></i>
+                        <p>Information Science</p>
+                    </div>
+                    <div class="bg-primary/50 p-4 rounded-lg text-center hover:bg-primary/70 transition duration-400">
+                        <i data-feather="code" class="w-8 h-8 mx-auto mb-2 text-secondary"></i>
+                        <p>Programming</p>
+                    </div>
+                    <div class="bg-primary/50 p-4 rounded-lg text-center hover:bg-primary/70 transition duration-400">
+                        <i data-feather="bar-chart-2" class="w-8 h-8 mx-auto mb-2 text-secondary"></i>
+                        <p>Data Visualization</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="mb-24">
+            <h2 class="text-3xl font-bold mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-accent to-secondary">
+                My Journey (Timeline)
+            </h2>
+            <div class="text-center text-white/50">
+                Konten Timeline akan tampil di sini setelah kamu membuat file timeline.js!
+            </div>
+        </section>
+
+        <section id="projects" class="mb-24">
+            <h2 class="text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-secondary to-accent">
+                Featured Projects
+            </h2>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+                <div class="bg-white/10 backdrop-blur-md border border-white/10 rounded-xl shadow-md transition-all duration-400 hover:shadow-project-hover hover:scale-[1.03]">
+                    <div class="h-48 bg-gradient-to-r from-primary to-accent flex items-center justify-center overflow-hidden rounded-t-xl">
+                        <img src="images/smartddc.png" alt="Demo ChatBot Smart DDC" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">ChaTBot Smart DDC</h3>
+                        <p class="text-secondary mb-4">Klasifikasi Otomatis Nomor Buku</p>
+                        <p class="mb-4 opacity-90">Membangun chatbot menggunakan Large Language Model (LLM) untuk mengklasifikasikan judul buku dan menavigasi kategori subjek DDC secara cerdas dan percakapan.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-primary/60 px-3 py-1 rounded-full text-sm">LLM / Gen AI</span>
+                            <span class="bg-primary/60 px-3 py-1 rounded-full text-sm">Python</span>
+                            <span class="bg-primary/60 px-3 py-1 rounded-full text-sm">DDC Classification</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white/10 backdrop-blur-md border border-white/10 rounded-xl shadow-md transition-all duration-400 hover:shadow-project-hover hover:scale-[1.03]">
+                    <div class="h-48 bg-gradient-to-r from-accent to-secondary flex items-center justify-center overflow-hidden rounded-t-xl">
+                        <img src="images/spkbuku.png" alt="Demo SPK Pemilihan Buku" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">SPK Pemilihan Judul Buku</h3>
+                        <p class="text-secondary mb-4">Sistem Pendukung Keputusan Akuisisi Koleksi</p>
+                        <p class="mb-4 opacity-90">Membangun Sistem Pendukung Keputusan (SPK) berbasis kriteria (AHP/SAW) untuk membantu pustakawan memilih dan memprioritaskan judul buku yang paling relevan dan efisien untuk diakuisisi.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-primary/60 px-3 py-1 rounded-full text-sm">DSS / SPK</span>
+                            <span class="bg-primary/60 px-3 py-1 rounded-full text-sm">Python</span>
+                            <span class="bg-primary/60 px-3 py-1 rounded-full text-sm">Data Analytics</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white/10 backdrop-blur-md border border-white/10 rounded-xl shadow-md transition-all duration-400 hover:shadow-project-hover hover:scale-[1.03]">
+                    <div class="h-48 bg-gradient-to-r from-secondary to-highlight flex items-center justify-center overflow-hidden rounded-t-xl">
+                        <img src="images/sigkuliner.jpg" alt="SIG Wisata Kuliner Demo" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">SIG Wisata Kuliner</h3>
+                        <p class="text-secondary mb-4">Pemetaan Geografis Potensi Makanan</p>
+                        <p class="mb-4 opacity-90">Membangun Sistem Informasi Geografis (SIG) untuk memetakan dan menganalisis potensi, aksesibilitas, serta persebaran lokasi kuliner di suatu daerah. Ideal untuk perencanaan wisata.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-primary/60 px-3 py-1 rounded-full text-sm">GIS / SIG</span>
+                            <span class="bg-primary/60 px-3 py-1 rounded-full text-sm">Python (Folium)</span>
+                            <span class="bg-primary/60 px-3 py-1 rounded-full text-sm">Geospatial</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact" class="mb-24">
+            <h2 class="text-3xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-accent to-secondary mb-8">
+                Connect With Me 🔗
+            </h2>
+            <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 max-w-2xl mx-auto shadow-xl flex flex-col items-center">
+                <p class="text-lg mb-6 opacity-90 text-center">
+                    Hubungi saya dan lihat lebih banyak karya saya melalui platform di bawah ini.
+                </p>
+
+                <div class="mt-4 flex justify-center gap-8">
+                    <a href="https://www.linkedin.com/in/azzahra-oktavia-0047892b8/" target="_blank" class="flex flex-col items-center group">
+                        <i data-feather="linkedin" class="w-8 h-8 text-white group-hover:text-secondary cursor-pointer transition duration-400 transform group-hover:scale-110"></i>
+                        <span class="text-xs mt-1 opacity-70 group-hover:opacity-100 transition duration-400">LinkedIn</span>
+                    </a>
+                    
+                    <a href="https://github.com/azzahraoktv" target="_blank" class="flex flex-col items-center group">
+                        <i data-feather="github" class="w-8 h-8 text-white group-hover:text-secondary cursor-pointer transition duration-400 transform group-hover:scale-110"></i>
+                        <span class="text-xs mt-1 opacity-70 group-hover:opacity-100 transition duration-400">GitHub</span>
+                    </a>
+                    
+                    <a href="azzahraoktavia@stikomelrahma.ac.id" class="flex flex-col items-center group">
+                        <i data-feather="mail" class="w-8 h-8 text-white group-hover:text-secondary cursor-pointer transition duration-400 transform group-hover:scale-110"></i>
+                        <span class="text-xs mt-1 opacity-70 group-hover:opacity-100 transition duration-400">Email</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-primary/80 text-center py-4 text-sm opacity-70">
+        &copy; 2025 Azzahra Oktavia. Built with Passion and Data.
+    </footer>
+
+    <script> feather.replace(); </script>
+</body>
+</html>
